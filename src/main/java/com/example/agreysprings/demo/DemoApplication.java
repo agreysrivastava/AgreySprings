@@ -13,10 +13,10 @@ public class DemoApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
         System.out.println("Bean Initialised");
+        Student student = (Student)context.getBean("student");
+        System.out.println(student.toString());
         LocalStudent lcstudent =context.getBean(LocalStudent.class);
         System.out.println(lcstudent.toString());
-        Student student = context.getBean(Student.class);
-        System.out.println(student.toString());
 
     }
 

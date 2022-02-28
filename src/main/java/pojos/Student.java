@@ -1,8 +1,13 @@
 package pojos;
 
+import lombok.Data;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+// PAT: 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
 
+@Qualifier("student")
 @Component
+@Data
 public class Student {
     int rollno;
     String name;
@@ -17,6 +22,6 @@ public class Student {
 
     public String toString(){
         return  new StringBuilder("Roll no. :").append(rollno).append("\nName : ").
-                append(name).append("\n Standard").append(std).toString();
+                append(name).append("\nStandard: ").append(std).toString();
     }
 }
